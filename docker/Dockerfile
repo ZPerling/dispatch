@@ -51,7 +51,6 @@ ENV TINI_VERSION 0.18.0
 RUN set -x \
     && wget -O /usr/local/bin/tini "https://github.com/krallin/tini/releases/download/v$TINI_VERSION/tini" \
     && wget -O /usr/local/bin/tini.asc "https://github.com/krallin/tini/releases/download/v$TINI_VERSION/tini.asc" \
-    && gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini \
     && rm /usr/local/bin/tini.asc \
     && chmod +x /usr/local/bin/tini
 
